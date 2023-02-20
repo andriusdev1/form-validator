@@ -38,43 +38,43 @@ function isValidEmail(email) {
 
 
 
-//Event Listeners
-form.addEventListener('submit', function(e) {
+//Event Listenaaaers
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
 
-    if (username.value ==='') {
+    if (username.value === '') {
         showError(username, 'Username is required');
-     } else {
-            showSuccess(username);
-        
+    } else {
+        showSuccess(username);
+
     }
 
-    
-        if (email.value ==='') {
-            showError(email, 'Email is required');
-         } else if(!isValidEmail(email.value)) {
-            showError(email, 'Email is not valid');
-         }
-         
-         else {
-                showSuccess(email);
-            
-        }
+
+    if (email.value === '') {
+        showError(email, 'Email is required');
+    } else if (!isValidEmail(email.value)) {
+        showError(email, 'Email is not valid');;
+    }
+
+    else {
+        showSuccess(email);
+
+    }
 
 
-        if (password.value ==='') {
-            showError(password, 'Password is required');
-        }
-            else{
-                showSuccess(password);
-            }
-        
-            if (password2.value ==='') {
-                showError(password2, 'Password Confirmation Required');
-              }  else {
-                    showSuccess(password2)
-                }
-            
+    if (password.value === '') {
+        showError(password, 'Password is required');
+    }
+    else {
+        showSuccess(password);
+    }
+
+    if (password2.value === '') {
+        showError(password2, 'Password Confirmation Required');
+    } else {
+        showSuccess(password2)
+    }
+
 
 });
